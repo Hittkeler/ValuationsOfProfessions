@@ -1,0 +1,24 @@
+@startuml Implementation Diagram
+actor User
+
+
+node aplicattion_Heroku {
+ component DjangoFramework
+ component Python
+ 
+}
+
+interface  Http
+
+node DigitalOcean {
+ artifact PostgreSQL{
+ database DataBase
+ 
+ }
+ 
+}
+
+User -- aplicattion_Heroku
+aplicattion_Heroku -- Http 
+Http -- DigitalOcean
+@enduml

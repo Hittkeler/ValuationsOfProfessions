@@ -1,0 +1,31 @@
+
+title ValuationsOfProfessions- Class Diagram
+
+
+class person {
++int id
++string name
++string description_service
+}
+
+class rol_profesional {
++int id
++string name_profesion
+}
+
+class person_rolprofesional{
++int person_id
++string professional_id
+
+}
+class assesment{
++int id
++int id
++int puntage
++id_rolprofesional
++int id_person
+
+}
+person "n" ---> "n" rol_profesional
+(person,rol_profesional) .. person_rolprofesional
+rol_profesional -- assesment
